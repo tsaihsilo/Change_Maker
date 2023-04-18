@@ -28,16 +28,16 @@ while True:
                 print("Invalid purchase price. Try again\n")
                 price = input("\nEnter the purchase price (xx.xx) or 'q' to quit: ")
 
-            #if price != float(price):
-            #    print("Invalid purchase price. Try again\n")
-            #    print("Invalid purchase price. Try again\n")
-            #else:
-            #    legit_price = int(float(price) * 100) % 5
-            #    if legit_price == 0:
-            #        break
-            #    else:
-            #        print("Illegal price: Must be a non-negative multiple of 5 cents.\n")
-            #        price = input("\nEnter the purchase price (xx.xx) or 'q' to quit: ")
+            if price != float(price):
+               print("Invalid purchase price. Try again\n")
+               print("Invalid purchase price. Try again\n")
+            else:
+               legit_price = int(float(price) * 100) % 5
+               if legit_price == 0:
+                   break
+               else:
+                   print("Illegal price: Must be a non-negative multiple of 5 cents.\n")
+                   price = input("\nEnter the purchase price (xx.xx) or 'q' to quit: ")
                 
     if s == False:
         total = (stock["nickels"] * 5 + 
